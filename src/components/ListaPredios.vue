@@ -1,55 +1,55 @@
 <template>
-    <div id="tblScope" class="container p-2">
-      <div class="row mb-2">
-        <div class="col-md-6">
-          <h3 class="float-left"><b-icon icon="search"></b-icon>...</h3>
-          <input
-            id="search"
-            class="float-left"
-            type="text"
-            placeholder="buscar por nome..."
-            v-model="search"
-          />
-        </div>
-
-        <div class="col-md-6">
-          <button
-            class="btn btn-primary float-right"
-            v-on:click="insertPredioClick()"
-          >
-            <b-icon icon="person-plus-fill"></b-icon> Add predio
-          </button>
-        </div>
+  <div id="tblScope" class="container p-2">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <h3 class="float-left"><b-icon icon="search"></b-icon>...</h3>
+        <input
+          id="search"
+          class="float-left"
+          type="text"
+          placeholder="buscar por nome..."
+          v-model="search"
+        />
       </div>
 
-      <table class="table text-dark">
-        <thead>
-          <tr>
-            <th>Predio</th>
-            <th>Edit</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="predio in predioFilter" v-bind:key="predio.id">
-            <td>{{ predio.nome }}</td>
-            <td>
-              <button
-                class="btn btn-primary mr-2 mb-1"
-                v-on:click="updatePredioClick(predio.id)"
-              >
-                <b-icon icon="person-lines-fill">Update</b-icon>
-              </button>
-              <button
-                class="btn btn-danger mr-2 mb-1"
-                v-on:click="deletePredioClick(predio.id)"
-              >
-                <b-icon icon="trash-fill">Delete</b-icon>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="col-md-6">
+        <button
+          class="btn btn-primary float-right"
+          v-on:click="insertPredioClick()"
+        >
+          <b-icon icon="person-plus-fill"></b-icon> Add predio
+        </button>
+      </div>
     </div>
+
+    <table class="table text-dark">
+      <thead>
+        <tr>
+          <th>Predio</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="predio in predioFilter" v-bind:key="predio.id">
+          <td>{{ predio.nome }}</td>
+          <td>
+            <button
+              class="btn btn-primary mr-2 mb-1"
+              v-on:click="updatePredioClick(predio.id)"
+            >
+              <b-icon icon="person-lines-fill">Update</b-icon>
+            </button>
+            <button
+              class="btn btn-danger mr-2 mb-1"
+              v-on:click="deletePredioClick(predio.id)"
+            >
+              <b-icon icon="trash-fill">Delete</b-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
