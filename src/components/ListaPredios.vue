@@ -1,5 +1,4 @@
 <template>
-  <div id="predio" class="container">
     <div id="tblScope" class="container p-2">
       <div class="row mb-2">
         <div class="col-md-6">
@@ -51,7 +50,6 @@
         </tbody>
       </table>
     </div>
-  </div>
 </template>
 
 <script>
