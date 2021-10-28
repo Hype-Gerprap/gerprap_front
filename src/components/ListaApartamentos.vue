@@ -14,7 +14,7 @@
 
         <div class="col-md-6">
           <button
-            class="btn btn-success float-right"
+            class="btn btn-primary float-right"
             v-on:click="insertApartamentoClick()"
           >
             <b-icon icon="person-plus-fill"></b-icon> Add apartamento

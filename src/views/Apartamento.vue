@@ -1,7 +1,7 @@
 <template>
   <div class="apartamentos">
     <div class="m-0 p-3 mx-auto" style="color: #000;">
-      <h1>Apartamentos</h1>
+      <h3>Apartamentos</h3>
       <ListaApartamentos />
     </div>
   </div>
