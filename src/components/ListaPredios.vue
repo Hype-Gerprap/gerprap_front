@@ -7,7 +7,7 @@
             id="search"
             class="float-left"
             type="text"
-            placeholder="search for @email..."
+            placeholder="buscar por nome..."
             v-model="search"
           />
         </div>
@@ -22,16 +22,16 @@
         </div>
       </div>
 
-      <table class="table text-light">
+      <table class="table text-dark">
         <thead>
           <tr>
-            <th>Email</th>
+            <th>Predio</th>
             <th>Edit</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="predio in predioFilter" v-bind:key="predio.id">
-            <td>{{ predio.email }}</td>
+            <td>{{ predio.nome }}</td>
             <td>
               <button
                 class="btn btn-primary mr-2 mb-1"
@@ -109,7 +109,7 @@ export default {
   computed: {
     predioFilter() {
       return this.predios.filter((predio) => {
-        return predio.email.match(this.search);
+        return predio.nome.match(this.search);
       });
     },
   },

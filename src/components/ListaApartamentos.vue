@@ -1,5 +1,4 @@
 <template>
-  <div id="apartamento" class="container">
     <div id="tblScope" class="container p-2">
       <div class="row mb-2">
         <div class="col-md-6">
@@ -8,7 +7,7 @@
             id="search"
             class="float-left"
             type="text"
-            placeholder="search for @email..."
+            placeholder="buscar por código..."
             v-model="search"
           />
         </div>
@@ -23,16 +22,16 @@
         </div>
       </div>
 
-      <table class="table text-light">
+      <table class="table text-dark">
         <thead>
           <tr>
-            <th>Email</th>
+            <th>Código</th>
             <th>Edit</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="apartamento in apartamentoFilter" v-bind:key="apartamento.id">
-            <td>{{ apartamento.email }}</td>
+            <td>{{ apartamento.codigo }}</td>
             <td>
               <button
                 class="btn btn-primary mr-2 mb-1"
@@ -51,7 +50,6 @@
         </tbody>
       </table>
     </div>
-  </div>
 </template>
 
 <script>
@@ -111,7 +109,7 @@ export default {
   computed: {
     apartamentoFilter() {
       return this.apartamentos.filter((apartamento) => {
-        return apartamento.email.match(this.search);
+        return apartamento.codigo.match(this.search);
       });
     },
   },
