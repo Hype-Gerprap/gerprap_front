@@ -13,8 +13,7 @@ const routes = [
   {
     path: "/predio",
     name: "Predio",
-    component: () =>
-      import("../views/Predio.vue"),
+    component: () => import("../views/Predio.vue"),
   },
   {
     path: "/predio/:id",
@@ -24,9 +23,14 @@ const routes = [
   {
     path: "/apartamento",
     name: "Apartamento",
-    component: () =>
-      import("../views/Apartamento.vue"),
+    component: () => import("../views/Apartamento.vue"),
   },
+  {
+    path: "/apartamento/:id",
+    name: "UpdateApartamento",
+    component: () => import("../views/UpdateApartamento.vue"),
+  },
+
 ];
 
 const router = new VueRouter({

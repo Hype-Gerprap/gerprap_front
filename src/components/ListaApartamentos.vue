@@ -97,11 +97,11 @@ export default {
         }
       });
     },
-    updateapArtamentoClick(id) {
+    updateApartamentoClick(id) {
       this.$router.push(`/apartamento/${id}`);
       console.log(id);
     },
-    insertapArtamentoClick() {
+    insertApartamentoClick() {
       this.$router.push(`/apartamento/-1`);
     },
   },
