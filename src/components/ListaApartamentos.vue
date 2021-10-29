@@ -26,12 +26,14 @@
       <thead>
         <tr>
           <th>Código</th>
+          <th>Predio</th>
           <th>Edit</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="apartamento in apartamentoFilter" v-bind:key="apartamento.id">
           <td>{{ apartamento.codigo }}</td>
+          <td>{{ apartamento.predio.nome }}</td>
           <td>
             <button
               class="btn btn-primary mr-2 mb-1"
