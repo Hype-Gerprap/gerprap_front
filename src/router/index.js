@@ -6,9 +6,20 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    name: "Home",
+    component: () =>
+      import("../views/Home.vue"),
+  },
+  {
+    path: "/predio",
     name: "Predio",
     component: () =>
       import("../views/Predio.vue"),
+  },
+  {
+    path: "/predio/:id",
+    name: "UpdatePredio",
+    component: () => import("../views/UpdatePredio.vue"),
   },
   {
     path: "/apartamento",
