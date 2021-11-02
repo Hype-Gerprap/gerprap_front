@@ -25,12 +25,14 @@
     <table class="table text-dark">
       <thead>
         <tr>
+          <th>Id</th>
           <th>Predio</th>
           <th>Edit</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="predio in predioFilter" v-bind:key="predio.id">
+          <td>{{ predio.id }}</td>
           <td>{{ predio.nome }}</td>
           <td>
             <button
