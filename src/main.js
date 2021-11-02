@@ -29,7 +29,7 @@ const Toast = Swal.mixin({
 });
 window.Toast = Toast;
 
-Vue.config.productionTip = false;
+//Vue.config.productionTip = false;
 
 new Vue({
   router,
