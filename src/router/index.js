@@ -7,8 +7,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () =>
-      import("../views/Home.vue"),
+    component: () => import("../views/Home.vue"),
   },
   {
     path: "/predio",
@@ -30,7 +29,6 @@ const routes = [
     name: "UpdateApartamento",
     component: () => import("../views/UpdateApartamento.vue"),
   },
-
 ];
 
 const router = new VueRouter({

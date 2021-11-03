@@ -45,7 +45,7 @@
           <input type="text" class="form-control" v-model="estado" />
         </fieldset>
 
-        <br>
+        <br />
 
         <router-link to="/predio" class="btn btn-danger mb-3 mr-3">
           <b-icon icon="arrow-left-square-fill"></b-icon> Back
@@ -166,6 +166,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

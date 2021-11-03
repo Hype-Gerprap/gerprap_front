@@ -31,7 +31,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="apartamento in apartamentoFilter" v-bind:key="apartamento.id">
+        <tr
+          v-for="apartamento in apartamentoFilter"
+          v-bind:key="apartamento.id"
+        >
           <td>{{ apartamento.codigo }}</td>
           <!-- <td>{{ apartamento.predio.nome }}</td> -->
           <td>
@@ -67,9 +70,11 @@ export default {
   },
   methods: {
     refreshApartamento() {
-      ApartamentoService.retriveAllApartamentos(this.instructor).then((response) => {
-        this.apartamentos = response.data;
-      });
+      ApartamentoService.retriveAllApartamentos(this.instructor).then(
+        (response) => {
+          this.apartamentos = response.data;
+        }
+      );
     },
     deleteApartamentoClick(id) {
       this.$swal({
@@ -87,11 +92,13 @@ export default {
             `Apartamento with ID: ${id} was deleted`,
             "success"
           );
-          ApartamentoService.deleteApartamento(this.instructor, id).then((response) => {
-            this.refreshApartamento();
-            console.log(`delete --> ID:${id}`);
-            return response;
-          });
+          ApartamentoService.deleteApartamento(this.instructor, id).then(
+            (response) => {
+              this.refreshApartamento();
+              console.log(`delete --> ID:${id}`);
+              return response;
+            }
+          );
         } else {
           window.Toast.fire("Canceled Operation", "", "info");
         }
@@ -118,6 +125,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

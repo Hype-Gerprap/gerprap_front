@@ -18,7 +18,10 @@ class ApartamentoDataService {
   }
 
   updateApartamento(name, id, apartamento) {
-    return axios.put(`${apartamento_api_url}/update-apartamento=${id}`, apartamento);
+    return axios.put(
+      `${apartamento_api_url}/update-apartamento=${id}`,
+      apartamento
+    );
   }
 
   createApartamento(name, apartamento) {

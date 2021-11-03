@@ -47,11 +47,15 @@
 
         <fieldset class="form-group col-md-6 m-auto">
           <label>Código Predio</label>
-          <input type="number" class="form-control" v-model="predio.id" 
-          :disabled="disabled == 1" />
+          <input
+            type="number"
+            class="form-control"
+            v-model="predio.id"
+            :disabled="disabled == 1"
+          />
         </fieldset>
 
-        <br>
+        <br />
 
         <router-link to="/apartamento" class="btn btn-danger mb-3 mr-3">
           <b-icon icon="arrow-left-square-fill"></b-icon> Back
@@ -110,7 +114,8 @@ export default {
             this.disabled = 0;
             this.active = false;
           }
-        });
+        }
+      );
     },
     validateAndSubmit(e) {
       e.preventDefault();
@@ -163,6 +168,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

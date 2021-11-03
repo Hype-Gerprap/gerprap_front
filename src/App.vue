@@ -47,8 +47,8 @@ b-nav-item a {
   color: #42b983;
 }
 
-  .def{
-      background-image: linear-gradient(
+.def {
+  background-image: linear-gradient(
     45deg,
     rgb(20, 222, 124) 0%,
     rgb(20, 222, 124) 21%,
@@ -64,6 +64,6 @@ b-nav-item a {
     rgb(44, 62, 97) 77%,
     rgb(49, 30, 92) 77%,
     rgb(49, 30, 92) 100%
-    );
-  }
+  );
+}
 </style>
